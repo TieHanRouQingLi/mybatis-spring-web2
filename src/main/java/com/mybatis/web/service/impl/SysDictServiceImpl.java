@@ -59,4 +59,16 @@ public class SysDictServiceImpl implements SysDictService{
 		return sysDictMapper.selectBySysDict(sysDict, rowBounds);
 	}
 
+	@Override
+	public boolean insertDict(SysDict sysDict) {
+		
+		int num = sysDictMapper.insert(sysDict);
+		boolean result = false;
+		if (num > 0) {
+			result = true;
+		}
+		
+		return result;
+	}
+
 }

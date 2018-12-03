@@ -13,5 +13,8 @@ public interface SysDictService {
 	boolean saveOrUpdate(SysDict sysDict);
 	
 	List<SysDict> findBySysDict(SysDict sysDict, Integer offset, Integer limit);
+	
+	boolean insertDict(SysDict sysDict);
+	
 
 }

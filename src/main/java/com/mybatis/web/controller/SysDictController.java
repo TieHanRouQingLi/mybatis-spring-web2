@@ -50,6 +50,23 @@ public class SysDictController {
 		return mv;
 	}
 	
+	@RequestMapping("/insertDict")
+	public ModelAndView insertDict() {
+		ModelAndView mv = new ModelAndView();
+		SysDict sd = new SysDict();
+		sd.setCode("summer");
+		sd.setName("одлЛ");
+		sd.setValue("2");
+		boolean result = sysDictService.insertDict(sd);
+		
+		if(result) {
+			mv.setViewName("success");
+		}else {
+			mv.setViewName("error");
+		}
+		
+		return mv;
+	}
 	
 
 }
