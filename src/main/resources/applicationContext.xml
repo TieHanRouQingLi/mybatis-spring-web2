@@ -55,7 +55,7 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
-	<!-- tx标签声明式事物 -->
+	<!-- 第一种方式：tx标签声明式事物 -->
 	
 <!--通过<tx:advice>标签定义事务增强，并制定事务管理器  -->
 <tx:advice id="txAdvice" transaction-manager="txManager">
@@ -87,4 +87,7 @@
 		<!-- 将事务增强与切入点组合（织入事务切面） -->
 		<aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice"/>
 	</aop:config>
+	
+	<!--第二种方式： 开启事务注解，标注@Transactional的类和方法将具有事务性 -->
+<!-- <tx:annotation-driven transaction-manager="txManager" /> -->
 </beans>
