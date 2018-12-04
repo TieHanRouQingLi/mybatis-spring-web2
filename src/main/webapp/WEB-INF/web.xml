@@ -77,6 +77,7 @@
 			<param-name>exclusions</param-name>
 			<param-value>/public/*,*.js,*.css,/druid*,*.jsp,*.swf</param-value>
 		</init-param>
+		
 		<init-param>
 			<param-name>principalSessionName</param-name>
 			<param-value>sessionInfo</param-value>
